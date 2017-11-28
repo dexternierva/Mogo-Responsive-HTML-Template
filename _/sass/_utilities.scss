@@ -1,0 +1,23 @@
+$base_font_size: 16;
+$px: ( 1 / $base_font_size ) * 1rem; // => Ex Usage: 24*$px
+
+/**
+ * Colors
+ *
+ */
+$tomato: #f38181;
+$yellow: #fce38a;
+$light: #eaffd0;
+$teal: #95e1d3;
+
+/**
+ * Background Image With Overlay
+ *
+ */
+@mixin background-overlay ($bg-image) {
+    background-image: -webkit-gradient( linear, left top, left bottom, from(rgba(255, 255, 255, 0.85)), to(rgba(255, 255, 255, 0.85)) ), url($bg-image);
+    background-image: linear-gradient( rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85) ), url($bg-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

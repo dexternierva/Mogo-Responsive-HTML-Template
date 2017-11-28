@@ -1,0 +1,203 @@
+/**
+ * Container
+ *
+ */
+.container {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+@media screen and ( min-width: 992px ) {
+    
+    .container {
+        width: 960px;
+        max-width: 100%;
+    }
+
+}
+
+@media screen and ( min-width: 1200px ) {
+    
+    .container {
+        width: 1140px;
+        max-width: 100%;
+    }
+    
+}
+
+@media screen and ( min-width: 1600px ) {
+    
+    .container {
+        width: 1200px;
+        max-width: 100%;
+    }
+    
+}
+
+
+/**
+ * Sections Layout
+ *
+ */
+.section {
+    padding-top: 2rem;
+}
+
+@media screen and ( min-width: 992px ) {
+    
+    .section {
+        padding-top: 5.625rem;
+    }
+
+}
+
+
+/**
+ * Sub-sections Layout
+ *
+ */
+.sub-section {
+    margin-top: 2rem;
+    padding: 2rem 0;
+    background: #f8f8f8;
+}
+
+.sub-section.no-bg {
+    margin-top: 0;
+    background: transparent;
+}
+
+@media screen and ( min-width: 992px ) {
+    
+    .sub-section {
+        margin-top: 6.2rem;
+        padding: 4.2rem 0;
+    }
+
+}
+
+
+/**
+ * Three Column Layout
+ *
+ */
+.three-columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    .column {
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
+
+@media screen and ( min-width: 992px ) {
+
+    .three-columns {
+
+        .column {
+            margin-top: 0;
+            width: 32%;
+        }
+        
+    }
+
+}
+
+/**
+ * Two Column Layout
+ *
+ */
+@media screen and ( min-width: 992px ) {
+
+    .two-columns {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    
+        .column {
+            width: 46%;
+        }
+    
+        .column:nth-last-child(1),
+        .column:nth-last-child(2) {
+            margin-bottom: 0;
+        }
+    
+    }
+
+}
+
+
+/** 
+ * Services Grid Layout
+ *
+ */
+@media screen and ( min-width: 640px ) {
+    
+    .services {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2.875rem;
+        grid-row-gap: 2.125rem;
+    }
+
+}
+
+@media screen and ( min-width: 992px ) {
+    
+    .services {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 3.875rem;
+        grid-row-gap: 3.125rem;
+    }
+
+}
+
+
+/**
+ * Work Items Layout
+ *
+ */
+@media screen and ( min-width: 768px ) {
+    
+    .work-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .work-list-item:nth-child(5) {
+        grid-column: 1 / 2;
+        grid-row: 3 / 5;                    
+    }
+
+}
+
+@media screen and ( min-width: 1200px ) {
+
+    .work-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .work-list-item:nth-child(5) {
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
+    }
+
+}
